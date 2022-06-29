@@ -21,35 +21,19 @@ body {
 
 .display {
   display: flex;
-  flex: 1;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-end;
   width: 80%;
+  height: 30%;
   margin: 5%;
-}
-
-.cdBtns {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 80%;
-  height: 20%;
-}
-
-.clearBtn, 
-.dltBtn {
-  display: flex;
-  width: 45%;
-  justify-content: center;
-  align-items: center;
 }
 
 .inputBtns {
   display: flex;
   flex-direction: column;
   flex: 1;
-  height: 50%;
+  height: 70%;
   width: 80%;
 }
 
@@ -59,7 +43,9 @@ body {
 }
 
 .numbBtn,
-.opBtn {
+.opBtn,
+.clearBtn,
+.dltBtn {
   display: flex;
   flex: 1;
   margin: 2%;
