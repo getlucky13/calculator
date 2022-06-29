@@ -1,5 +1,6 @@
 * {
-  border: 1px solid black;
+  /*border: 1px solid black;*/
+  color: white;
 }
 
 body {
@@ -8,6 +9,7 @@ body {
   align-items: center;
   height: 100vh;
   width: 100vw;
+  background-color: grey;
 }
 
 .calc {
@@ -16,7 +18,10 @@ body {
   justify-content: center;
   align-items: center;
   height: 80vh;
-  width: 50vw;
+  width: 35vw;
+  border: 5px solid black;
+  border-radius: 20px;
+  background-color: black;
 }
 
 .display {
@@ -24,9 +29,12 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
-  width: 80%;
+  width: 90%;
   height: 30%;
   margin: 5%;
+  border: 2px solid white;
+  border-radius: 10px;
+  background-color: lightgrey;
 }
 
 .inputBtns {
@@ -34,7 +42,10 @@ body {
   flex-direction: column;
   flex: 1;
   height: 70%;
-  width: 80%;
+  width: 90%;
+  border: 2px solid white;
+  border-radius: 10px;
+  margin-bottom: 5%;
 }
 
 .btnRow {
@@ -51,4 +62,7 @@ body {
   margin: 2%;
   justify-content: center;
   align-items: center;
+  border: 2px solid purple;
+  background-color: purple;
+  border-radius: 10px;
 }
