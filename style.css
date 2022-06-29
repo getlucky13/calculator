@@ -6,6 +6,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+  width: 100vw;
 }
 
 .calc {
@@ -13,24 +15,26 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 90vh;
-  width: 60vw;
+  height: 80vh;
+  width: 50vw;
 }
 
 .display {
   display: flex;
+  flex: 1;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 90%;
+  width: 80%;
+  margin: 5%;
 }
 
 .cdBtns {
   display: flex;
-  flex: 1;
   justify-content: space-around;
   align-items: center;
-  width: 100%;
+  width: 80%;
+  height: 20%;
 }
 
 .clearBtn, 
@@ -41,3 +45,24 @@ body {
   align-items: center;
 }
 
+.inputBtns {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 50%;
+  width: 80%;
+}
+
+.btnRow {
+  display: flex;
+  flex: 1;
+}
+
+.numbBtn,
+.opBtn {
+  display: flex;
+  flex: 1;
+  margin: 2%;
+  justify-content: center;
+  align-items: center;
+}
