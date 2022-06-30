@@ -65,4 +65,11 @@ body {
   border: 2px solid purple;
   background-color: purple;
   border-radius: 10px;
+  font-size: 32px;
+}
+
+.displayPrevious,
+.displayCurrent {
+  color: black;
+  font-size: 64px;
 }
