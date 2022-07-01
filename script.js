@@ -15,20 +15,19 @@ function divide(a, b) {
 }
 
 function operate(a, operator, b) {
-  let result;
+  a = Number(a);
+  b = Number(b);
   switch(operator) {
     case '+' :
-      result = add(a,b);
-      break;
+      return add(a,b);
     case '-' :
-      result = subtract(a,b);
-      break;
+      return subtract(a,b);
     case '*':
-      result = multiply(a,b);
-      break;
+      return multiply(a,b);
     case '/' :
-      result = divide(a,b);
-      break;
+      if(b === 0) return null;
+      else return divide(a,b);
+    defualt:
+      return null;
   }
-  return result;
 }
