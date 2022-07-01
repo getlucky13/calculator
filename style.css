@@ -56,7 +56,9 @@ body {
 .numbBtn,
 .opBtn,
 .clearBtn,
-.dltBtn {
+.dltBtn,
+.equalsBtn,
+.periodBtn {
   display: flex;
   flex: 1;
   margin: 2%;
