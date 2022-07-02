@@ -50,6 +50,24 @@ function clearAll() {
   firstOperand = '';
   secondOperand = '';
   currentOpperation = null;
+}
+
+function calculate() {
+  if(currentOperation === null || shouldClearDisplay) return;
+  if(currentOperation ==='/' && currentDisplay.textContent ==='0') {
+    alert("You can't divide by 0!");
+    return; }
+  secondOperand = currentDisplay.textContent;
+  currentDisplay.textContent = roundResult(
+    operate(firstOperand, currentOperation, secondOperand);
+  )
+  previousDisplay.textContent = `${firstOperand} ${currentOperation} ${secondOperand} =`;
+  currentOperation = null;
+}
+
+function roundResult(number) {
+  return Math.round(number*1000)/1000
+}
 
 function add(a, b) {
   return a + b;
