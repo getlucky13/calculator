@@ -29,7 +29,7 @@ function appendDigit(number) {
 function appendPeriod() {
   if(shouldClearDisplay) {clearCurrentDisplay()}
   if(currentDisplay.textContent === '') {currentDisplay.textContent = '0';}
-  if(currentDisplay.textContnet.includes('.'))return;
+  if(currentDisplay.textContent.includes('.'))return;
   currentDisplay.textContent += '.';
 }
 
