@@ -5,25 +5,21 @@ let shouldClearDisplay = false;
 
 const numBtns = document.querySelectorAll('button.numbBtn');
 const opBtns = document.querySelectorAll('button.opBtns');
-const equalsBtn = document.querySelector('button.equalBtn');
-const clrBtn = document.querySelector('button.clrBtn')
-const dltBtn = document.querySelector('buttn.dltBtn');
-const displayCurrent = document.querySelector('div.displayCurrent');
-const displayPrevious = document.querySelectory('div.displayPrevious');
-const periodBtn = docutment.querySelector('button.periodBtn');
+const equalsBtn = document.querySelector('button.equalsBtn');
+const clrBtn = document.querySelector('button.clearBtn')
+const dltBtn = document.querySelector('button.dltBtn');
+const currentDisplay = document.querySelector('div.displayCurrent');
+const previousDisplay = document.querySelector('div.displayPrevious');
+const periodBtn = document.querySelector('button.periodBtn');
 
 equalsBtn.addEventListener('click', calculate);
-clearBtn.addEventListener('click', clearAll);
+clrBtn.addEventListener('click', clearAll);
 dltBtn.addEventListener('click', deleteDigit);
-periodBtn.addEventListener('click', appenedPeriod);
+periodBtn.addEventListener('click', appendPeriod);
 
-numBtns.forEach((button =>
-  button.addEventListener('click', () => appendDigit(button.textContent))
-)
+numBtns.forEach((button => button.addEventListener('click', () => appendDigit(button.textContent))))
 
-opBtns.forEach((button =>
-  button.addEventListener('click', () => setOperation(button.textContent))
-)
+opBtns.forEach((button => button.addEventListener('click', () => setOperation(button.textContent))))
                 
 function appendDigit(number) {
   if(currentDisplay.textContent === '0' || shouldClearDisplay) {clearCurrentDisplay();}
@@ -71,8 +67,7 @@ function calculate() {
     return; }
   secondOperand = currentDisplay.textContent;
   currentDisplay.textContent = roundResult(
-    operate(firstOperand, currentOperation, secondOperand);
-  )
+    operate(firstOperand, currentOperation, secondOperand));
   previousDisplay.textContent = `${firstOperand} ${currentOperation} ${secondOperand} =`;
   currentOperation = null;
 }
