@@ -39,7 +39,7 @@ function clearCurrentDisplay() {
 }
 
 function setOperation(operator) {
-  if(currentOperation !== null) evaluate();
+  if(currentOperation !== null) {calculate()};
   firstOperand = currentDisplay.textContent;
   currentOperation = operator;
   previousDisplay.textContent = `${firstOperand} ${currentOperation}`;
