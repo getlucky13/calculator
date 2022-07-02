@@ -38,6 +38,19 @@ function setOperation(operator) {
   shouldClearScreen = true;
 }
 
+function deleteDigit() {
+  currentDisplay.textContent = currentDisplay.textContent
+    .toString()
+    .slice(0,-1)
+}
+
+function clearAll() {
+  currentDisplay.textContent = '0';
+  previousDisplay.textContent = '';
+  firstOperand = '';
+  secondOperand = '';
+  currentOpperation = null;
+
 function add(a, b) {
   return a + b;
 }
@@ -67,7 +80,7 @@ function operate(a, operator, b) {
     case '/' :
       if(b === 0) return null;
       else return divide(a,b);
-    defualt:
+    default:
       return null;
   }
 }
