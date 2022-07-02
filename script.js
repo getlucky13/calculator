@@ -10,9 +10,21 @@ const clrBtn = document.querySelector('button.clrBtn')
 const dltBtn = document.querySelector('buttn.dltBtn');
 const displayCurrent = document.querySelector('div.displayCurrent');
 const displayPrevious = document.querySelectory('div.displayPrevious');
+const periodBtn = docutment.querySelector('button.periodBtn');
 
+equalsBtn.addEventListener('click', calculate);
+clearBtn.addEventListener('click', clearAll);
+dltBtn.addEventListener('click', deleteDigit);
+periodBtn.addEventListener('click', appenedPeriod);
 
+numBtns.forEach((button =>
+  button.addEventListener('click', () => appendDigit(button.textContent))
+)
 
+opBtns.forEach((button =>
+  button.addEventListener('click', () => setOperation(button.textContent))
+)
+                
 function appendDigit(number) {
   if(currentDisplay.textContent === '0' || shouldClearDisplay) {clearCurrentDisplay();}
   currentDisplay.textContent += number;
@@ -25,7 +37,7 @@ function appendPeriod() {
   currentDisplay.textContent += '.';
 }
 
-function clearCurrentDispla() {
+function clearCurrentDisplay() {
   currentDisplay.textContent = '';
   shouldClearDisplay = false;
 }
