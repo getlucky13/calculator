@@ -43,7 +43,7 @@ function setOperation(operator) {
   firstOperand = currentDisplay.textContent;
   currentOperation = operator;
   previousDisplay.textContent = `${firstOperand} ${currentOperation}`;
-  shouldClearScreen = true;
+  shouldClearDisplay = true;
 }
 
 function deleteDigit() {
