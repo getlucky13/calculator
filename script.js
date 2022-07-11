@@ -4,7 +4,7 @@ let currentOperation = null;
 let shouldClearDisplay = false;
 
 const numBtns = document.querySelectorAll('button.numbBtn');
-const opBtns = document.querySelectorAll('button.opBtns');
+const opBtns = document.querySelectorAll('button.opBtn');
 const equalsBtn = document.querySelector('button.equalsBtn');
 const clrBtn = document.querySelector('button.clearBtn')
 const dltBtn = document.querySelector('button.dltBtn');
